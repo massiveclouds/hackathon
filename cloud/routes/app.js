@@ -6,20 +6,20 @@ exports.index = function(req, res) {
 };
 
 exports.signup = function(req, res) {
-  res.render('home/index', {
+  res.render('main/signup', {
   
   });
 }
 
 exports.login = function(req, res) {
-  res.render('home/login', {
+  res.render('main/login', {
 
 
   });
 }
 
 exports.create = function(req, res) {
-  res.render('home/index', {
+  res.render('main/create', {
   
   });
 }
@@ -36,21 +36,17 @@ exports.home = function(req, res) {
   //query.limit(100);
   query.descending('creation');
   query.find().then(function(oaths) {
-    res.render('home/index', {
+    res.render('main/index', {
       title: "Oaths",
       oaths: oaths
     });
-  });
-
-  res.render('home/index', {
-  
   });
 }
 
 exports.oath = function(req, res) {
   var oathId = req.params.oathId;
 
-  res.render('home/index', {
+  res.render('main/oath', {
   
   });
 }

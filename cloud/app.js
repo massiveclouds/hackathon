@@ -22,6 +22,6 @@ app.get('/login',			appController.login);
 app.get('/signup', 			appController.signUp);
 app.get('/home', 			appController.home);
 app.get('/create', 			appController.create);
-app.get('/oath/:oathId', 	appController.showOath)
+app.get('/oath/:oathId', 	appController.showOath);
 
 app.listen();
