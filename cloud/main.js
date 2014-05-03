@@ -1,2 +1,2 @@
-require ('code/app');
+require ('cloud/app');
 
