@@ -14,7 +14,7 @@ app.use(app.router);
 // Setup your keys here (TODO: replace with dummy values before publicizing)
 app.locals.parseApplicationId = 'yRju46x2iVXPYnhxEyEvadi0bom7JCiPtwMioKoV';
 app.locals.parseJavascriptKey = '2mKlt7zQSNRCao3mIMfBo1a9VbowJBcWoIWXXvfX';
-app.locals.facebookApplicationId = 'YOUR_FB_APP_ID';
+app.locals.facebookApplicationId = '661583543896224';
 
 // Define all the endpoints
 app.get('/', mainView.index);
