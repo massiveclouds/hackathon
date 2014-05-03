@@ -43,7 +43,7 @@ exports.home = function(req, res) {
   });
 }
 
-exports.oath = function(req, res) {
+exports.showOath = function(req, res) {
   var oathId = req.params.oathId;
 
   res.render('main/oath', {
