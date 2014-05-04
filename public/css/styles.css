@@ -258,3 +258,11 @@ width: 100%;
 label {
 color: #428BCA;
 }
+
+button.submit {
+margin: 15px 0;
+}
+
+.col-xs-6 span {
+padding: 0 10px;
+}
