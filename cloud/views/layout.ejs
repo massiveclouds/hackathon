@@ -63,26 +63,28 @@
       height: 200px;
     }
   </style>
-<script type="text/javascript">
-var curLat = null;
-var curLon = null;
-navigator.geolocation.getCurrentPosition(
-	function(position) {
+	<script type="text/javascript">
+	var curLat = null;
+	var curLon = null;
+
+	navigator.geolocation.getCurrentPosition(
+		function(position) {
 		curLat = position.coords.latitude;
 		curLon = position.coords.longitude;
-	//	    google.maps.event.addDomListener(window, 'load', initialize);	
+	//	google.maps.event.addDomListener(window, 'load', initialize);	
 	initialize();
+		}
+	);
 	
-});
-  function initialize() {
+	function initialize() {
     var mapOptions = {
-      center: new google.maps.LatLng(curLat, curLon),
+      center: new google.maps.LatLng("40.75279", "-73.99411"),
       zoom: 8
     };
     var map = new google.maps.Map(document.getElementById("map-canvas"),
         mapOptions);
-  }
-</script>
+  	}
+	</script>
 
 
   </head>
