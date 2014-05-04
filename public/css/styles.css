@@ -177,6 +177,7 @@ background-repeat: repeat-x;
 background-image: url('/images/break.jpg');
 background-position: top center;
 background-repeat: repeat-x;
+clear: both;
 }
 
 .fb-login {
