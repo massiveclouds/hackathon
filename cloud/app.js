@@ -19,6 +19,7 @@ var appController = require('cloud/routes/app');
 
 app.get('/', 				appController.index);
 app.get('/login',			appController.login);
+app.get('/logout',			appController.logout);
 app.get('/signup', 			appController.signup);
 app.get('/home', 			appController.home);
 app.get('/create', 			appController.create);

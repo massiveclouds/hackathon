@@ -19,6 +19,25 @@
 
 <li class="submitbtn"><button type="submit" class="btn btn-default">Submit</button></li>
 
+
+<script>
+
+$("#loginWithFacebookButton").click(function() {
+  Parse.FacebookUtils.logIn(null, {
+    success: function(user) {
+      if (!user.existed()) {
+        alert("User signed up and logged in through Facebook!");
+		    app.redirect('create');
+      } else {
+        alert("User logged in through Facebook!");
+      }
+      window.location.href = "/home";
+    },
+    error: function(user, error) {
+      alert("User cancelled the Facebook login or did not fully authorize.");
+    }
+  });
+
 </ul>
 
 </form>
@@ -45,5 +64,7 @@ error: function(user, error) {
 alert("User cancelled the Facebook login or did not fully authorize.");
 }
 });
+
 });
+
 </script>

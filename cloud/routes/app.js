@@ -3,7 +3,7 @@ exports.index = function(req, res) {
   res.render('main/index', {
     
   });
-};
+}
 
 exports.signup = function(req, res) {
   res.render('main/signup', {
@@ -17,6 +17,9 @@ exports.login = function(req, res) {
   });
 }
 
+exports.logout = function(req, res) {
+  Parse.User.logOut();
+}
 var Users = Parse.Object.extend("Users");
 
 exports.create = function(req, res) {
@@ -78,7 +81,7 @@ exports.imHere = function(req, res) {
       res.json({ status: "success" });
     }, 
     error:function(obj, err) {
-          res.json({ status: "error" });
+      res.json({ status: "error" });
       alert("Error: " + err);
     }
   });
@@ -89,4 +92,3 @@ exports.home = function(req, res) {
 
   });
 }
-
