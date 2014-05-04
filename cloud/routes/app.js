@@ -17,6 +17,12 @@ exports.login = function(req, res) {
   });
 }
 
+exports.finish = function(req, res) {
+  res.render('main/finish', {
+    
+  });
+}
+
 exports.logout = function(req, res) {
   Parse.User.logOut();
 }

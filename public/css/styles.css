@@ -32,7 +32,7 @@ height:7px;
 
 /* Space out content a bit */
 body {
-background-image: url(/images/bg3.jpg);
+background-image: url(/images/bg4.jpg);
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -188,7 +188,7 @@ padding: 25px 0 0;
 }
 
 input {
-border: 2px solid #428BCA;
+border: 2px solid #428BCA !important;
 margin: 0 0 10px;
 }
 
@@ -257,4 +257,18 @@ width: 100%;
 
 label {
 color: #428BCA;
+}
+
+button.submit {
+margin: 15px 0;
+}
+
+.col-xs-6 span {
+padding: 0 10px;
+white-space: nowrap;
+text-transform:uppercase;
+}
+
+.col-xs-6 span input {
+margin: 0 5px 0 0;
 }
