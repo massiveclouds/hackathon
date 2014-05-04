@@ -1,4 +1,4 @@
-// Shows the list of memes
+// Shows the list of oaths
 exports.index = function(req, res) {
   res.render('main/index', {
   
@@ -23,6 +23,11 @@ exports.create = function(req, res) {
   });
 }
 
+exports.create = function(req, res) {
+  res.render('main/friends'. {
+
+  });
+}
 ///////////////////////////////
 //// Logged In User views /////
 ///////////////////////////////
