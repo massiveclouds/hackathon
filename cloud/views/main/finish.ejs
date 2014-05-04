@@ -1,20 +1,6 @@
 <h1>Your Done!</h1>
 <p> Come Back to this link whne you have fulfilled your promise</p>
-<button id="imHere" class="btn btn-large">Close Promise</button>
+<button id="imHere" class="btn btn-large" onclick="window.locationhref ='/';">Close Promise</button>
 
 
 
-<script>
-
-$("#imHere").click(function() {
-	navigator.geolocation.getCurrentPosition(
-		function(position) {
-		$.get('/imHere/<%= oath.get('objectId') %>/' + position.coords.latitude + "/" + position.coords.longitude,
-		function(data) {
-				console.log(data);
-			}
-		);
-	});
-});
-
-</script>
