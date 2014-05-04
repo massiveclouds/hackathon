@@ -49,3 +49,24 @@ exports.showOath = function(req, res) {
   
   });
 }
+
+var Friends = Parse.FacebookUtils.init({
+    appId      : '{661583543896224}',
+    status     : true,
+    xfbml      : true,
+    version    : 'v2.0',
+  });
+
+exports.home = function(req, res) {
+  // List of oaths
+  var query = new Parse.Query(Friends);
+  //query.limit(100);
+  
+  query.find().then(function(friends) {
+    res.render('main/index', {
+      title: "Friends",
+      friends: friends
+    });
+  });
+}
+
