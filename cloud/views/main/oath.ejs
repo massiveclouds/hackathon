@@ -1,8 +1,21 @@
+<h1><%= oath.get('description') %></h1>
 
-<div class="rt-center">
-	<form action="user.signup">
-		<input type = "email" name="email" placeholder="Email" id="email" />
-		<input type="password" name ="password" placeholder="Password" id="password">
-		<input type ="password" name="confirmPassword" placeholder="Confirm Password">
-	</form>
-</div>
+<button id="imHere" class="btn btn-large">I'm Here</button>
+
+
+
+<script>
+
+$("#imHere").click(function() {
+	navigator.geolocation.getCurrentPosition(
+		function(position) {
+
+		$.get('/imHere/<%= oath.get('objectId') %>/' + position.coords.latitude + "/" + position.coords.longitude,
+			function(data) {
+				console.log(data);
+			}
+		);
+	});
+});
+
+</script>

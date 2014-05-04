@@ -23,5 +23,6 @@ app.get('/signup', 			appController.signup);
 app.get('/home', 			appController.home);
 app.get('/create', 			appController.create);
 app.get('/oath/:oathId', 	appController.showOath);
+app.get('/imHere/:oathId/:lat/:lon', appController.imHere);
 
 app.listen();
