@@ -100,3 +100,20 @@ border: 2px solid #777;
 border-radius: 20px;
 margin: 2% auto;
 }
+
+#loginWithFacebookButton {
+background-color: #428BCA;
+color: #FFF;
+border-radius: 20px;
+padding: 10px 25px;
+text-transform: uppercase;
+font-weight: bold;
+letter-spacing: 1px;
+margin: 0 auto 28px;
+display: block;
+box-shadow: 0 4px 5px #AAA;
+}
+
+#loginWithFacebookButton:hover {
+box-shadow: none;
+}
