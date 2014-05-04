@@ -167,7 +167,7 @@ background-repeat: repeat-x;
 
 .fb-login {
 clear: both;
-margin: 110px 0 0;
+padding: 25px 0 0;
 }
 
 .login input {
@@ -180,4 +180,26 @@ width:100%;
 
 li.submitbtn button {
 margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+
+ul.login li {
+clear: both;
+}
+
+li.submitbtn {
+width: auto !important;
+}
+
+ul.login {
+max-width: 100%;
+}
+
+.fb-login {
+clear: none;
+padding: 65px 0 0;
+height: 210px;
+}
+
 }
