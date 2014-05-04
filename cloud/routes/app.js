@@ -13,7 +13,7 @@ exports.signup = function(req, res) {
 
 exports.login = function(req, res) {
   res.render('main/login', {
-  
+    
   });
 }
 
@@ -35,7 +35,7 @@ exports.home = function(req, res) {
   //query.limit(100);
   query.descending('creation');
   query.find().then(function(oaths) {
-    res.render('main/index', {
+    res.render('main/home', {
       title: "Oaths",
       oaths: oaths
     });
