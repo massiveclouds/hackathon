@@ -75,18 +75,13 @@ exports.imHere = function(req, res) {
   var q = new Parse.Query(Oath);
   q.get(oathId, {
     success:function(obj) {
-       
-
-
-
+      res.json({ status: "success" });
     }, 
     error:function(obj, err) {
+          res.json({ status: "error" });
       alert("Error: " + err);
     }
   });
-
-
-  res.json({ some: "object literal" });
 }
 
 exports.home = function(req, res) {
