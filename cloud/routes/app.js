@@ -24,7 +24,7 @@ exports.create = function(req, res) {
 }
 
 exports.create = function(req, res) {
-  res.render('main/friends'. {
+  res.render('main/friends', {
 
   });
 }
