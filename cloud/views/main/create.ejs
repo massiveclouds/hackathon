@@ -14,6 +14,7 @@ function showPosition(position)
   x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
   }
 </script>
+<% console.log(allUsers); %>
 <form role="form" action ="/finish">
   <div class="form-group">
     <textarea name="oath" rows="15" cols="100" placeholder="What is your oath"></textarea>
@@ -21,8 +22,8 @@ function showPosition(position)
   <div class="form-group">
     <label for="exampleInputPassword1">Friend</label>
     <select>
-	<% for (user in users) { %>
-    <option value="<%= user.get('objectId') %>"><%= user.get('name') %></option>
+	<% for (i=0;i<allUsers.length;i++) { %>
+    <option value="<%= allUsers[i].id %>"><%= allUsers[i].get('name') %></option>
     <% } %>
 	</select>
     

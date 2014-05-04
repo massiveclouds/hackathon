@@ -20,11 +20,13 @@ exports.login = function(req, res) {
 var Users = Parse.Object.extend("Users");
 
 exports.create = function(req, res) {
-	var allUsers = new Parse.Query(Users);
-  
-  res.render('main/create', {
-	  users: allUsers
+  var query = new Parse.Query(Users);
+  query.find().then(function(users) {
+	  res.render('main/create', {
+		  allUsers: users
+	  });
   });
+  
 }
 ///////////////////////////////
 //// Logged In User views /////
