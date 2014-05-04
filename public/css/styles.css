@@ -132,7 +132,7 @@ display: block;
 box-shadow: 0 4px 5px #AAA;
 }
 
-li.active a:hover, button {
+li.active a:hover, button:hover {
 box-shadow: inset 0 0 10px #000000 !important;
 }
 
