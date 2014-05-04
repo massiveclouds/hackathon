@@ -47,13 +47,24 @@
 
 <script>
 
-getFriends();
 
-function getFriends() {
-  FB.api('/me/friends', {fields: 'name,id,location' }, function(response) {
-    console.log(response); 
-  });
-}
+
+
+  setTimeout(getFriends, 1000);
+
+  function getFriends() {
+    FB.getLoginStatus(function(response){
+      console.log("getLoginStatus: " + response);
+    });
+
+
+    FB.api('/me/friends', {fields: 'name, id, location'},
+      function(response) {
+      console.log(response); 
+    });
+  }
+
+
 
 </script>
 
