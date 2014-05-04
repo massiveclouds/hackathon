@@ -26,6 +26,7 @@ $("#loginWithFacebookButton").click(function(){
       } else {
         alert("User logged in through Facebook!");
       }
+      window.location.href = "/home";
     },
     error: function(user, error) {
       alert("User cancelled the Facebook login or did not fully authorize.");

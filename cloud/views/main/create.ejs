@@ -1,15 +1,63 @@
-<div class="top-action"></div>
-<div class="rt-center"> List of all users that can take an oath with you
-  <div class="user-list">
-    <div class="surround">
-      <div class="checkbox">
-        <label>
-        <input type="checkbox" value="">
-        <div class="picture"><img src="images/uploade/picture.jpg"></div>
-        <div class="name"></div>
-        <div class="subline"></div>
-        </label>
-      </div>
-    </div>
-  </div>
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-6">Description</div>
+  <div class="col-xs-6"><input type="text" class="form-control" placeholder="Oath Description"></div>
 </div>
+
+
+<div class="row">
+  <div class="col-xs-6">Friend</div>
+  <div class="col-xs-6"></div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-6">Checkin Location</div>
+  <div class="col-xs-6"></div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-6">Deadline</div>
+  <div class="col-xs-6"></div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-6">Time +/</div>
+  <div class="col-xs-6"></div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-6">Consequence</div>
+  <div class="col-xs-6"></div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-12"><button type="submit" class="btn btn-default btn-lrg">Submit</button></div>
+</div>
+
+
+
+<script>
+
+getFriends();
+
+function getFriends() {
+  FB.api('/me/friends', {fields: 'name,id,location' }, function(response) {
+    console.log(response); 
+  });
+}
+
+</script>
+
+
+
+
+
