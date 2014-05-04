@@ -142,8 +142,14 @@ box-shadow: inset 0 0 10px #000000;
 
 ul.login li {
 float: left;
+list-style: none;
+margin: 0 2% 0 0;
 }
 
 ul.login .form-group {
 text-align: left;
+}
+
+ul.login {
+float: left;
 }
