@@ -1,19 +1,4 @@
-<script>
-var x = document.getElementById("demo");
-function getLocation()
-  {
-  if (navigator.geolocation)
-    {
-    navigator.geolocation.getCurrentPosition(showPosition);
-    }
-  else{x.innerHTML = "Geolocation is not supported by this browser.";}
-  }
-function showPosition(position)
-  {
-  x.innerHTML = "Latitude: " + position.coords.latitude +
-  "<br>Longitude: " + position.coords.longitude;
-  }
-</script>
+
 <form role="form" action ="/finish">
   <div class="form-group">
     <textarea name="oath" placeholder="What is your oath"></textarea>
@@ -36,7 +21,7 @@ function showPosition(position)
 
 <div class="row">
   <div class="col-xs-6">Checkin Location</div>
-  <div class="col-xs-6"><span id="demo"></span><button onclick="getLocation()">Try It</button></div>
+  <div class="col-xs-6"><span id="demo"></span><a href="#" class="btn btn-default" onclick="getLocation()">Get Coordinates</a></div>
 </div>
 
 
