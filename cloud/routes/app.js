@@ -50,13 +50,15 @@ exports.showOath = function(req, res) {
   });
 }
 
-var Friends = Parse.FacebookUtils.init({
+var FriendsInit = Parse.FacebookUtils.init({
     appId      : '{661583543896224}',
     status     : true,
     xfbml      : true,
     version    : 'v2.0',
   });
-
+FB.api('/me', {fields: 'last_name'}, function(response) {
+  console.log(response);
+});
 exports.home = function(req, res) {
   // List of oaths
   var query = new Parse.Query(Friends);
