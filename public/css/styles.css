@@ -265,4 +265,9 @@ margin: 15px 0;
 
 .col-xs-6 span {
 padding: 0 10px;
+white-space: nowrap;
+}
+
+.col-xs-6 span input {
+padding: 0 2px;
 }
