@@ -1,21 +1,22 @@
+<script language="javascript" type="text/javascript">
 
-   <script language="javascript" type="text/javascript">
-var x = document.getElementById('demo');
-function getLocation()
-  {
-  if (navigator.geolocation)
-    {
-    navigator.geolocation.getCurrentPosition(showPosition);
-    }
-  else{x.innerHTML = "Geolocation is not supported by this browser.";}
-  }
-function showPosition(position)
-  {
-  x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
-  }
+$(document).ready({
+
+$("#ContractForm").submit(function( event ) {
+	createOath();
+	event.preventDefault();
+});
+
+function createOath() {
+	alert("Fuck you");
+}
+
+});
 </script>
+
 <% console.log(allUsers); %>
-<form role="form" action ="/finish">
+
+<form id="ContractForm" role="form" onsubmit="javascript:createOath();">
   <div class="form-group">
     <textarea name="oath" rows="15" cols="100" placeholder="What is your oath"></textarea>
   </div>
@@ -44,10 +45,6 @@ function showPosition(position)
   <div class="col-xs-6">Deadline</div>
   <div class="col-xs-6"><input type="date" class="form-control" placeholder="Oath Description"></div>
 </div>
-
-
-
-
 
 <div class="row">
   <div class="col-xs-6">What happens next?</div>
