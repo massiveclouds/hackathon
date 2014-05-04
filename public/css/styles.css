@@ -16,8 +16,7 @@
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+background-color: #CCC;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -92,4 +91,12 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.container {
+padding: 2%;
+background-color: #FFF;
+border: 2px solid #777;
+border-radius: 20px;
+margin: 2% auto;
 }
