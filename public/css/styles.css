@@ -157,11 +157,11 @@ float: left;
 .header {
 background-image: url('/images/break.jpg');
 background-position: bottom center;
-background-repeat: no-repeat;
+background-repeat: repeat-x;
 }
 
 .footer {
 background-image: url('/images/break.jpg');
 background-position: top center;
-background-repeat: no-repeat;
+background-repeat: repeat-x;
 }
