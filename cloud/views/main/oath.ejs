@@ -9,9 +9,8 @@
 $("#imHere").click(function() {
 	navigator.geolocation.getCurrentPosition(
 		function(position) {
-
 		$.get('/imHere/<%= oath.get('objectId') %>/' + position.coords.latitude + "/" + position.coords.longitude,
-			function(data) {
+		function(data) {
 				console.log(data);
 			}
 		);

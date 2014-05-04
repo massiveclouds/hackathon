@@ -20,14 +20,14 @@
 
 
 
-
 <script>
-$("#loginWithFacebookButton").click(function(){
+
+$("#loginWithFacebookButton").click(function() {
   Parse.FacebookUtils.logIn(null, {
     success: function(user) {
       if (!user.existed()) {
         alert("User signed up and logged in through Facebook!");
-		app.redirect('create');
+		    app.redirect('create');
       } else {
         alert("User logged in through Facebook!");
       }
@@ -38,4 +38,5 @@ $("#loginWithFacebookButton").click(function(){
     }
   });
 });
+
 </script>

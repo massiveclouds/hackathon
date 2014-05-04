@@ -3,7 +3,7 @@ exports.index = function(req, res) {
   res.render('main/index', {
     
   });
-};
+}
 
 exports.signup = function(req, res) {
   res.render('main/signup', {
@@ -15,6 +15,10 @@ exports.login = function(req, res) {
   res.render('main/login', {
     
   });
+}
+
+exports.logout = function(req, res) {
+  Parse.User.logOut();
 }
 
 exports.create = function(req, res) {
