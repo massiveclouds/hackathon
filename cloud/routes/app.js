@@ -1,7 +1,7 @@
 // Shows the list of memes
 exports.index = function(req, res) {
   res.render('main/index', {
-  
+    
   });
 };
 
@@ -19,7 +19,7 @@ exports.login = function(req, res) {
 
 exports.create = function(req, res) {
   res.render('main/create', {
-  
+    
   });
 }
 
@@ -45,15 +45,48 @@ exports.home = function(req, res) {
 exports.showOath = function(req, res) {
   var oathId = req.params.oathId;
 
-  res.render('main/oath', {
-  
+  console.log("Oath ID: " + oathId);
+
+  var q = new Parse.Query(Oath);
+  q.get(oathId, {
+    success:function(obj) {
+      res.render('main/oath', {
+        oath: obj
+      });
+    }, 
+    error:function(obj, err) {
+      alert("Error: " + err);
+    }
   });
 }
 
+exports.imHere = function(req, res) {
+  var oathId = req.params.oathId;
+  var lat = req.params.lat;
+  var lon = req.params.lon;
+
+  console.log("imHere: " + oathId + ", " + lat + "," + lon);
+
+  var q = new Parse.Query(Oath);
+  q.get(oathId, {
+    success:function(obj) {
+       
+
+
+
+    }, 
+    error:function(obj, err) {
+      alert("Error: " + err);
+    }
+  });
+
+
+  res.json({ some: "object literal" });
+}
 
 exports.home = function(req, res) {
-    res.render('main/index', {
+  res.render('main/index', {
 
-    });
+  });
 }
 
