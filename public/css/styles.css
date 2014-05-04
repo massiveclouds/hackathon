@@ -14,6 +14,10 @@
 text-rendering: optimizeLegibility;
 }
 
+a, a img {
+	border: none !important;
+}
+
 h1, h2, h3, h4, h5 {
 font-size: 30px !important;
 color: #428BCA !important;
@@ -272,4 +276,8 @@ text-transform:uppercase;
 
 .col-xs-6 span input {
 margin: 0 5px 0 0;
+}
+
+#map-canvas {
+width: 100% !important;
 }
