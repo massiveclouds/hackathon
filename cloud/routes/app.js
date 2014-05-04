@@ -55,12 +55,10 @@ exports.showOath = function(req, res) {
   });
 }
 
-var FriendsInit = Parse.FacebookUtils.init({
-    appId      : '{661583543896224}',
-    status     : true,
-    xfbml      : true,
-    version    : 'v2.0',
-  });
 
+exports.home = function(req, res) {
+    res.render('main/index', {
 
+    });
+}
 
