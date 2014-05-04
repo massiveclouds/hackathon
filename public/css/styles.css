@@ -166,6 +166,9 @@ background-repeat: repeat-x;
 }
 
 .fb-login {
+background-image: url('/images/break.jpg');
+background-position: top center;
+background-repeat: repeat-x;
 clear: both;
 padding: 25px 0 0;
 }
@@ -201,6 +204,7 @@ max-width: 100%;
 }
 
 .fb-login {
+background-image: none;
 clear: none;
 padding: 65px 0 0;
 height: 210px;
@@ -211,6 +215,9 @@ height: 210px;
 @media screen and (max-width: 500px) {
 
 .fb-login {
+background-image: url('/images/break.jpg');
+background-position: top center;
+background-repeat: repeat-x;
 clear: both;
 text-align: left;
 margin: 0 35px 0;
