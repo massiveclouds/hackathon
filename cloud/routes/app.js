@@ -87,6 +87,10 @@ exports.imHere = function(req, res) {
   });
 }
 
+exports.processOath = function(req, res) {
+  console.log(req.params);
+}
+
 exports.home = function(req, res) {
   res.render('main/index', {
 
