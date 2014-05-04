@@ -173,8 +173,9 @@ clear: both;
 padding: 25px 0 0;
 }
 
-.login input {
+input {
 border: 2px solid #428BCA;
+margin: 0 0 10px;
 }
 
 li.submitbtn {
@@ -230,4 +231,16 @@ height: 95px;
 margin: 0;
 }
 
+}
+
+select {
+text-transform: capitalize;
+}
+
+textarea {
+width: 100%;
+}
+
+label {
+color: #428BCA;
 }
