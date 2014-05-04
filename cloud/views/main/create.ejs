@@ -1,4 +1,19 @@
 
+   <script language="javascript" type="text/javascript">
+var x = document.getElementById('demo');
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    }
+  else{x.innerHTML = "Geolocation is not supported by this browser.";}
+  }
+function showPosition(position)
+  {
+  x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+  }
+</script>
 <form role="form" action ="/finish">
   <div class="form-group">
     <textarea name="oath" rows="15" cols="100" placeholder="What is your oath"></textarea>
