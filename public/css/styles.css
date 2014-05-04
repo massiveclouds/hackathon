@@ -273,3 +273,7 @@ text-transform:uppercase;
 .col-xs-6 span input {
 margin: 0 5px 0 0;
 }
+
+#map-canvas {
+width: 100% !important;
+}
