@@ -17,9 +17,13 @@ exports.login = function(req, res) {
   });
 }
 
+var Users = Parse.Object.extend("Users");
+
 exports.create = function(req, res) {
+	var allUsers = new Parse.Query(Users);
+  
   res.render('main/create', {
-    
+	  users: allUsers
   });
 }
 ///////////////////////////////
