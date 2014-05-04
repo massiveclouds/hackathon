@@ -76,7 +76,7 @@ exports.imHere = function(req, res) {
       res.json({ status: "success" });
     }, 
     error:function(obj, err) {
-          res.json({ status: "error" });
+      res.json({ status: "error" });
       alert("Error: " + err);
     }
   });
@@ -87,4 +87,3 @@ exports.home = function(req, res) {
 
   });
 }
-
