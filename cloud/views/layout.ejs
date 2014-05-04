@@ -37,6 +37,17 @@
          ref.parentNode.insertBefore(js, ref);
        }(document, /*debug*/ false));
     
+function getFriends() {
+    FB.api('/me/friends', function(response) {
+        if(response.data) {
+            $.each(response.data,function(index,friend) {
+                alert(friend.name + ' has id:' + friend.id);
+            });
+        } else {
+            alert("Error!");
+        }
+    });
+}
     </script>
 
     <title>Take the OATH</title>
@@ -57,7 +68,7 @@
     <script src="/js/bootstrap.min.js"></script>
     <script language="javascript" type="text/javascript" src="/js/validate.js"></script>
   </head>
-  <body>
+  <body class="background">
     <div id="fb-root"></div>
     
 
